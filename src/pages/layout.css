@@ -72,6 +72,8 @@ p {
   background: transparent;
   color: var(--primaryColor);
 }
-/* .gatsby-image-wrapper {
-  max-height: 600px;
-} */
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
