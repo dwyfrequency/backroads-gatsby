@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from '../css/navbar.module.css'
-import { FaAlignRight, FaBluetooth } from 'react-icons/fa'
+import { FaAlignRight } from 'react-icons/fa'
 import links from '../constants/links'
 import socialIcons from '../constants/social-icons'
 import logo from '../images/logo.svg'
@@ -37,7 +37,7 @@ const Navbar = () => {
         </ul>
         <div className={styles.navSocialLinks}>
           {socialIcons.map(({ url, icon }, index) => (
-            <a key={index} href={url} target="_blank">
+            <a key={index} href={url} target="_blank" rel="noopener noreferrer">
               {icon}
             </a>
           ))}
