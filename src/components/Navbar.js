@@ -35,6 +35,13 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+        <div className={styles.navSocialLinks}>
+          {socialIcons.map(({ url, icon }, index) => (
+            <a key={index} href={url} target="_blank">
+              {icon}
+            </a>
+          ))}
+        </div>
       </div>
     </nav>
   )
