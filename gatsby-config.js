@@ -6,5 +6,11 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata: {
+    title: 'BackRoads',
+    description:
+      'Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure',
+    author: '@dwyfrequency',
+  },
   plugins: [`gatsby-plugin-styled-components`],
 }
