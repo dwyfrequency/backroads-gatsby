@@ -5,7 +5,7 @@ import services from '../../constants/services'
 
 const Services = () => {
   return (
-    <self className={styles.services}>
+    <div className={styles.services}>
       <Title title="our" subtitle="services" />
       <div className={styles.center}>
         {services.map((item, index) => {
@@ -18,7 +18,7 @@ const Services = () => {
           )
         })}
       </div>
-    </self>
+    </div>
   )
 }
 
