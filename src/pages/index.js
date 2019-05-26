@@ -4,6 +4,7 @@ import SimpleHero from '../components/SimpleHero'
 import Banner from '../components/Banner'
 import { Link } from 'gatsby'
 import About from '../components/home/about'
+import Services from '../components/home/Services'
 
 export default () => (
   <Layout>
@@ -15,5 +16,6 @@ export default () => (
       </Banner>
     </SimpleHero>
     <About />
+    <Services />
   </Layout>
 )
