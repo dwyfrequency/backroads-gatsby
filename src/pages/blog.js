@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Images from '../components/Images'
+import Images from '../examples/Images'
 
 const blog = () => {
   return (
