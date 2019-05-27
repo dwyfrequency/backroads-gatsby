@@ -1,14 +1,8 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Images from '../examples/Images'
 
 const blog = () => {
-  return (
-    <Layout>
-      llo from blog page
-      <Images />
-    </Layout>
-  )
+  return <Layout>llo from blog page</Layout>
 }
 
 export default blog
