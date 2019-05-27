@@ -5,7 +5,7 @@ import About from '../components/Home/About'
 import Services from '../components/Home/Services'
 import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 export default ({ data }) => (
   <Layout>
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
@@ -13,9 +13,9 @@ export default ({ data }) => (
         title="continue exploring"
         info=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, officiis."
       >
-        {/* <AniLink fade to="/tours" className="btn-white">
+        <AniLink fade to="/tours" className="btn-white">
           explore tours
-        </AniLink> */}
+        </AniLink>
       </Banner>
     </StyledHero>
     <About />
