@@ -12,5 +12,16 @@ module.exports = {
       'Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine & say yes to adventure',
     author: '@dwyfrequency',
   },
-  plugins: [`gatsby-plugin-styled-components`],
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+  ],
 }
