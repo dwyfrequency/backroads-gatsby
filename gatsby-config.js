@@ -21,6 +21,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-transition-link`,
+    `gatsby-plugin-playground`, //access with ___playground instead ___graphql
     {
       resolve: `gatsby-source-filesystem`,
       options: {
