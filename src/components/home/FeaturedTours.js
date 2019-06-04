@@ -7,7 +7,7 @@ import Tour from '../tours/Tour'
 
 const query = graphql`
   query {
-    tours: allContentfulTour(filter: { featured: { eq: true } }) {
+    featuredTours: allContentfulTour(filter: { featured: { eq: true } }) {
       edges {
         node {
           name
@@ -18,7 +18,7 @@ const query = graphql`
           days
           images {
             fluid {
-              src
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
         }
@@ -28,12 +28,15 @@ const query = graphql`
 `
 
 const FeaturedTours = () => {
-  useStaticQuery(query)
+  const response = useStaticQuery(query)
+  const { edges: tours } = response.featuredTours
   return (
     <section className={styles.tours}>
       <Title title="featured" subtitle="tours" />
       featured tours
-      <Tour />
+      {tours.map(({ node }) => {
+        return <Tour key={node.contentful_id} tour={node} />
+      })}
       <AniLink fade to="/tours" className="btn-primary">
         all tours
       </AniLink>
