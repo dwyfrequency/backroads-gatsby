@@ -36,6 +36,8 @@ const Tour = ({ tour }) => {
   )
 }
 
+// Validating the tour prop we are getting.
+// This way we can check if these fields are not coming in an adhering to these types
 Tour.propTypes = {
   tour: PropTypes.shape({
     name: PropTypes.string.isRequired,
