@@ -8,7 +8,6 @@ import PropTypes from 'prop-types'
 
 const Tour = ({ tour }) => {
   const { name, price, country, days, slug, images } = tour
-  console.log(country)
 
   let mainImage = images[0].fluid
 

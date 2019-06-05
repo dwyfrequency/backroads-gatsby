@@ -47,7 +47,6 @@ const getImages = graphql`
 const Images = () => {
   const data = useStaticQuery(getImages)
   const { fixed, fluid } = data
-  console.log(fixed)
   return (
     <Wrapper>
       <article>

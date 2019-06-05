@@ -10,7 +10,6 @@ const Navbar = () => {
   const [isOpen, setNav] = useState(false)
 
   const toggleNav = () => {
-    console.log('clicked')
     setNav(prevIsOpen => !prevIsOpen)
   }
 
