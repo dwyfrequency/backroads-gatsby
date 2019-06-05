@@ -36,6 +36,9 @@ h6 {
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
 }
+a {
+  text-decoration: none;
+}
 p {
   margin-bottom: 1.25rem;
 }
