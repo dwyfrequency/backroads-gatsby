@@ -16,7 +16,7 @@ const Tour = ({ tour }) => {
           details
         </AniLink>
       </div>
-      <div className="styles.footer">
+      <div className={styles.footer}>
         <h3>{name}</h3>
         <div className={styles.info}>
           <h4 className={styles.country}>
