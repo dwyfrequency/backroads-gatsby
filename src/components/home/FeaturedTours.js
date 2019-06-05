@@ -1,11 +1,11 @@
 import React from 'react'
+import Tour from '../Tours/Tour'
 import { useStaticQuery, graphql } from 'gatsby'
 import Title from '../Title'
 import styles from '../../css/items.module.css'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-import Tour from '../tours/Tour'
 
-const query = graphql`
+const getTours = graphql`
   query {
     featuredTours: allContentfulTour(filter: { featured: { eq: true } }) {
       edges {
@@ -28,15 +28,18 @@ const query = graphql`
 `
 
 const FeaturedTours = () => {
-  const response = useStaticQuery(query)
-  const { edges: tours } = response.featuredTours
+  const response = useStaticQuery(getTours)
+  const tours = response.featuredTours.edges
+
   return (
     <section className={styles.tours}>
       <Title title="featured" subtitle="tours" />
-      featured tours
-      {tours.map(({ node }) => {
-        return <Tour key={node.contentful_id} tour={node} />
-      })}
+      <div className={styles.center}>
+        {tours.map(({ node }) => {
+          return <Tour key={node.contentful_id} tour={node} />
+        })}
+      </div>
+
       <AniLink fade to="/tours" className="btn-primary">
         all tours
       </AniLink>
