@@ -3,7 +3,20 @@ import { graphql } from 'gatsby'
 
 const TourTemplate = ({ data }) => {
   console.log(data)
-  return <div>{data.contentfulTour.name}</div>
+  const {
+    name,
+    country,
+    days,
+    description: { description },
+    images,
+    price,
+    start,
+    journey,
+  } = data.contentfulTour
+  // const [mainImage, ...tourImages] = images
+  console.log(data.contentfulTour)
+
+  return <div>{name}</div>
 }
 
 // we get the variable from the gatsby node file
