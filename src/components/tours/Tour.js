@@ -22,15 +22,6 @@ const Tour = ({ tour }) => {
   const data = useStaticQuery(getImage)
   const img = data.file.childImageSharp.fluid
   const { name, price, country, days, slug, images } = tour
-  console.log(data)
-
-  // let mainImage
-  // if (images) {
-  //   mainImage = images[0].fluid
-  // } else {
-  //   mainImage = img
-  // }
-  // creating a default image in case
   let mainImage = images ? images[0].fluid : img
 
   return (
