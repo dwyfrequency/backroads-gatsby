@@ -3,9 +3,16 @@ import { graphql } from 'gatsby'
 
 const TourTemplate = ({ data }) => {
   console.log(data)
-  return <div>tour template</div>
+  return <div>{data.contentfulTour.name}</div>
 }
 
+// we get the variable from the gatsby node file
+// it has to match the key in context for our query param
+/*
+context: {
+        slug: node.slug,
+      },
+*/
 export const query = graphql`
   query($slug: String!) {
     contentfulTour(slug: { eq: $slug }) {
