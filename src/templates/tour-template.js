@@ -1,5 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import StyledHero from '../components/StyledHero'
+import styles from '../css/template.module.css'
+import Img from 'gatsby-image'
+import { FaMoneyBillWave, FaMap } from 'react-icons'
 
 const TourTemplate = ({ data }) => {
   console.log(data)
@@ -13,10 +18,15 @@ const TourTemplate = ({ data }) => {
     start,
     journey,
   } = data.contentfulTour
-  // const [mainImage, ...tourImages] = images
+  const [mainImage, ...tourImages] = images
   console.log(data.contentfulTour)
 
-  return <div>{name}</div>
+  return (
+    <Layout>
+      <StyledHero />
+      <div>{name}</div>
+    </Layout>
+  )
 }
 
 // we get the variable from the gatsby node file
